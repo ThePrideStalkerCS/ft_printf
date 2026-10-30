@@ -1,15 +1,15 @@
 *This project has been created as part of the 42 curriculum by maratana*
 
-ft_printf
+# ft_printf
 
-Description"
+## Description
 The ft_printf project aims to recreate the behavior of the standard printf() function using variadic arguments.
 
 The function formats and prints different data types to standard output while returning the number of characters printed.
 
-Instructions:
+## Instructions:
 
-Compilation
+### Compilation
 
 Run the following command to compile the library:
 
@@ -23,7 +23,7 @@ make fclean — removes object files and libftprintf.a.
 
 make re — recompiles the library from scratch.
 
-Suported formats:
+### Suported formats:
 
 %c Prints a single character.
 %s Prints a string (as defined by the common C convention).
@@ -35,8 +35,14 @@ Suported formats:
 %X Prints a number in hexadecimal (base 16) uppercase format.
 %% Prints a percent sign.
 
-Resources:
+### Resources:
 
 C standard library manual pages (man)
 
 ChatGpt - research and explanation of new concepts.
+
+## Algorythms and Datastructures
+
+recursive number conversion: int to hex and int to string
+
+va_list: new data type used to access the variadic-arguments

@@ -6,14 +6,13 @@
 /*   By: maratana <maratana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 14:24:38 by maratana          #+#    #+#             */
-/*   Updated: 2026/10/23 15:24:42 by maratana         ###   ########.fr       */
+/*   Updated: 2026/10/30 16:04:11 by maratana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdarg.h>
 #include <stdint.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -70,24 +69,24 @@ int	pointerhex(uintptr_t n)
 	return (count);
 }
 
-int	format(char c, va_list args, int chars)
+int	format(char c, va_list *args, int chars)
 {
 	if (c == 'c')
-		chars += ft_putchar_fd(va_arg(args, int), 1);
+		chars += ft_putchar_fd(va_arg(*args, int), 1);
 	if (c == 's')
-		chars += ft_putstr_fd(va_arg(args, char *), 1);
+		chars += ft_putstr_fd(va_arg(*args, char *), 1);
 	if (c == 'p')
-		chars += ft_putpointer(va_arg(args, void *));
+		chars += ft_putpointer(va_arg(*args, void *));
 	if (c == 'd')
-		chars += ft_putnbr_fd(va_arg(args, int), 1);
+		chars += ft_putnbr_fd(va_arg(*args, int), 1);
 	if (c == 'i')
-		chars += ft_putnbr_fd(va_arg(args, int), 1);
+		chars += ft_putnbr_fd(va_arg(*args, int), 1);
 	if (c == 'u')
-		chars += ft_putuint_fd(va_arg(args, unsigned int), 1);
+		chars += ft_putuint_fd(va_arg(*args, unsigned int), 1);
 	if (c == 'x')
-		chars += puthex(va_arg(args, unsigned int));
+		chars += puthex(va_arg(*args, unsigned int));
 	if (c == 'X')
-		chars += put_hex(va_arg(args, unsigned int));
+		chars += put_hex(va_arg(*args, unsigned int));
 	if (c == '%')
 		chars += write(1, "%", 1);
 	return (chars);
@@ -113,13 +112,15 @@ int	ft_printf(const char *s, ...)
 		else
 		{
 			i++;
-			chars = format(s[i], args, chars);
+			chars = format(s[i], &args, chars);
 			i++;
 		}
 	}
+	va_end(args);
 	return (chars);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	char *p=0;
