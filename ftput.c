@@ -6,12 +6,11 @@
 /*   By: maratana <maratana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 22:31:34 by maratana          #+#    #+#             */
-/*   Updated: 2026/10/31 18:05:08 by maratana         ###   ########.fr       */
+/*   Updated: 2026/10/31 18:38:00 by maratana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 #include <unistd.h>
 
 int	ft_putchar_fd(char c, int fd)
