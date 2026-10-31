@@ -6,7 +6,7 @@
 /*   By: maratana <maratana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 14:24:38 by maratana          #+#    #+#             */
-/*   Updated: 2026/10/30 16:04:11 by maratana         ###   ########.fr       */
+/*   Updated: 2026/10/31 18:05:38 by maratana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,21 +119,3 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (chars);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char *p=0;
-// 	printf("test? %p\n",p);
-// 	printf("\nchars printed:%i",ft_printf("p adress: %p",p));
-// }
-
-// %c Prints a single character.
-// %s Prints a string (as defined by the common C convention).
-// %p The void * pointer argument has to be printed in hexadecimal format.
-// %d Prints a decimal (base 10) number.
-// %i Prints an integer in base 10.
-// %u Prints an unsigned decimal (base 10) number.
-// %x Prints a number in hexadecimal (base 16) lowercase format.
-// %X Prints a number in hexadecimal (base 16) uppercase format.
-// %% Prints a percent sign.

@@ -6,7 +6,7 @@
 /*   By: maratana <maratana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 22:31:34 by maratana          #+#    #+#             */
-/*   Updated: 2026/10/23 15:15:32 by maratana         ###   ########.fr       */
+/*   Updated: 2026/10/31 18:05:08 by maratana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,8 +97,3 @@ int	ft_putpointer(void *p)
 	write(1, "0x", 2);
 	return (pointerhex(i) + 2);
 }
-
-// int	main(void)
-// {
-// 	printf("%i",printf("%s", (char *)NULL));
-// }

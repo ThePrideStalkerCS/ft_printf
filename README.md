@@ -23,6 +23,8 @@ make fclean — removes object files and libftprintf.a.
 
 make re — recompiles the library from scratch.
 
+to use in other projects you need to include ft_printf.h and compile with the libftprintf.a file
+
 ### Suported formats:
 
 %c Prints a single character.
